@@ -3,9 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Describe your project</title>
+    <title>Blood Flow Background Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .background {
+            background-image: url('static\background_anemia.jpeg');
+
+            background-size: 200% 100%;
+            animation: bloodFlow 5s infinite linear;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        @keyframes bloodFlow {
+            from {
+                background-position: 0% 0%;
+            }
+            to {
+                background-position: 100% 0%;
+            }
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .content {
+            color: white;
+            font-size: 24px;
+            margin-top: 60px;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #home {
+            background: linear-gradient(90deg, #ff4d4d 25%, #e92222 50%, #870909 75%);
+            background-size: 200% 100%;
+            animation: bloodFlow 5s infinite linear;
+        }
+        #about {
+            background-color: #222;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-   <p> hello!!</p>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="prediction">Predict</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="home" class="section background">
+        <div class="content">
+            <h2>Anemia Predictor : Your Health Guardian </h2>
+            <p>Empowering you with early detection for better management and healthier leaving</p>
+        </div>
+    </div>
+    <div id="about" class="section">
+        <div class="content">
+            <h1>About</h1>
+            <p>Anemia is a condition that develops when your blood produces a lower-than-normal amount of healthy red blood cells. If you have anemia, your body does not get enough oxygen-rich blood. 
+                The lack of oxygen can make you feel tired or weak.Symptoms of anemia can include tiredness, weakness, shortness of breath, and pale or yellowish skin. Additionally, 
+                severe anemia may lead to symptoms like brittle nails and mouth ulcers. It's important to consult a healthcare provider for accurate diagnosis and treatment options.
+
+            </p>
+        </div> 
+    </div>
 </body>
 </html>

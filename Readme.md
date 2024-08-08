@@ -32,7 +32,7 @@ In pandas, we have a function called read_csv() to read the dataset. As a parame
             
 To handle imbalanced data we have use undersampling. Undersampling addresses imbalanced data by reducing instances in overrepresented classes, achieving class balance. It mitigates model bias towards majority classes.
 
-**Exploratory Data Analysis**
+**Exploratory Data Analysis**\
 Exploratory data analysis (EDA) is a crucial step in understanding the characteristics of the data.
 
 1. Descriptive Statistical : Descriptive analysis is to study the basic features of data with the statistical process. Here pandas have a worthy function called describe. With this described function we can understand the unique, top and frequent values of categorical features. And we can find mean, std, min, max, and percentile values of continuous features.
@@ -49,28 +49,33 @@ Multivariate analysis - multivariate analysis is to find the relation between mu
 
 3. Splitting data into train and test : The train-test split is used to estimate the performance of machine learning algorithms that are applicable for prediction-based Algorithms/Applications. This method is a fast and easy procedure to perform such that we can compare our own machine learning model results to machine results. By default, the Test set is split into 30 % of actual data and the training set is split into 70% of the actual data.For splitting training and testing data we are using the train_test_split() function from sklearn. As parameters, we are passing x, y, test_size, random_state.
 
-**Model Building**
+**Model Building**\
 Model building is the process of creating a machine learning model that can make predictions or classify data.
 1. Training the model in multiple algorithms
 Now our data is cleaned and it’s time to build the model. We can train our data on different algorithms. For this project, we are applying six Regression algorithms. The best model is saved based on its performance.
 
         1.1 Logistic Regression Model 
 A variable named logistic_regression is created and train and test data are passed as the parameters. Inside the function, the Linear Regression algorithm is initialized and training data is passed to the model. fit() function. Test data is predicted with. predict() function and save d in a new variable. For evaluating the model, an accuracy score and classification report are used. 
+
         1.2 Random forest model
 A variable named random_forest is created and train and test data are passed as the parameters. Inside the function, the RandomForestClassifier algorithm is initialized and training data is passed to the model with the .fit() function. Test data is predicted with the .predict() function and saved in a new variable. For evaluating the model, an accuracy score and classification report are used. 
+
         1.3 Decision Tree Model 
 A function named decision_tree_model is created and train and test data are passed as the parameters. Inside the function, the Decision Classifier algorithm is initialized and training data is passed to the model the with .fit() function. Test data is predicted with the .predict() function and saved in a new variable. For even altering the model, accuracy score and classification report are used. 
+
         1.4 Gaussian Navies Bayes 
 A variable named NB is created and train and test data are passed as the parameters. Inside the function, the Gaussian Navies Bayes algorithm is initialized and training data is passed to the model with the .fit() function. Test data is predicted with the .predict() function and saved in a new variable. For evaluating the model, an accuracy score and classification report are used. 
+
         1.5 Support Vector Machine Model
 A function named SVC is created and train and test data are passed as the parameters. Inside the function, the Support vector machine algorithm is initialized and training data is passed to the model with the .fit() function. Test data is predicted with the .predict() function and saved in a new variable. For evaluating the model, an accuracy score and classification report are used.
+
         1.6 Gradient Boosting Classifier 
 A function named GBC is created and train and test data are passed as the parameters. Inside the function, the Gradient Boosting algorithm is initialized and training data is passed to the model with the .fit() function. Test data is predicted with the .predict() function and saved in a new variable. For evaluating the model, an accuracy score and classification report are used. 
 
-**Testing the model**
+**Testing the model**\
 Here we have tested with the Lasso model algorithm. You can test with all algorithms. With the help of the predict() function.
 
-**Testing model with multiple evaluation metrics**
+**Testing model with multiple evaluation metrics**\
 Multiple evaluation metrics means evaluating the model's performance on a test set using different performance measures. This can provide a more comprehensive understanding of the model's strengths and weaknesses. We are using evaluation metrics for regression tasks including Accuracy scores and classification report.
 
 Comparing the models
@@ -85,3 +90,23 @@ Comparing the models
 
 We can see the accuracy of all models and based on accuracy and Test Accuracy Decision Tree, Random forest, and Gradient Boosting classifier model have highest accuracy.
  
+**Saving the best model**\ 
+After comparing its performance using different evaluation metrics means selecting the model with the highest performance and saving its weights and configuration. This is useful in avoiding the need to retrain the model every time it is needed and also to be able to use it in the future. Here, we have saved the **Gradient Boost Classifier model**.
+
+**Integrating with Web framework**\
+ A web application is built that is integrated to the model we built. A UI is provided for the users where she/he has to enter the values for predictions. The enter values are given to the saved model and prediction is showcased on the UI. 
+
+1. Building Html Pages
+
+For this project we created two HTML files namely
+
+        Index.html
+        predict.html
+
+and saved them in the templates folder.
+
+2. Building python code
+We created a python file named app.py and saved it in the root directory.
+
+3. Run the web application
+We run the web application using the command python app.py.
