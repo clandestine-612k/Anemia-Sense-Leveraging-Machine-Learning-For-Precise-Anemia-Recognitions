@@ -4,19 +4,21 @@
  Date: 2024-08-02\
  Version: 1.0
 
+Anemia is a widespread medical condition affecting millions of individuals globally, characterized by a deficiency of red blood cells or hemoglobin, leading to fatigue, weakness, and a reduced quality of life. Traditional methods for diagnosing and managing anemia often rely on standard blood tests and manual interpretation, which can be time-consuming, prone to errors, and may not provide a comprehensive understanding of the condition's underlying causes.
+
+Problem: Despite the availability of diagnostic tools, accurately identifying the specific type and severity of anemia, predicting its progression, and determining the most effective management strategies remain challenging. This difficulty arises from the complex nature of anemia, which can be caused by various factors, including nutritional deficiencies, chronic diseases, and genetic disorders. Moreover, the variability in patient response to treatment necessitates a more personalized approach to anemia management.
+
+Objective: Anemiasense aims to revolutionize the diagnosis and management of anemia by leveraging advanced machine learning algorithms. The goal is to develop a system that can accurately classify different types of anemia, predict disease progression, and recommend personalized treatment plans based on individual patient data. This approach promises to reduce diagnostic errors, enhance treatment effectiveness, and improve patient outcomes, ultimately addressing the significant healthcare burden posed by anemia.
 
 Project Description:
 
 Anemiasense leverages machine learning algorithms to provide precise recognition and management of anemia, a condition characterized by a deficiency of red blood cells or hemoglobin. Here are three general scenarios illustrating its use case:
+
 Scenario 1: Early Detection and Diagnosis:
+
 Anemiasense utilizes machine learning models trained on vast datasets of blood parameters and patient profiles to detect early signs of anemia. By analyzing key indicators such as hemoglobin levels, red blood cell counts, and other relevant biomarkers, the system can flag potential cases for further investigation by healthcare professionals. Early detection enables timely interventions and treatment plans, improving patient outcomes.
-Scenario 2: Personalized Treatment Plans
-Machine learning algorithms in Anemiasense can analyze diverse patient data, including genetic factors, lifestyle habits, and medical history, to generate personalized treatment plans. By considering individual variations and responses to different treatments, the system helps healthcare providers tailor interventions for optimal results. This personalized approach enhances the effectiveness of anemia management and reduces the risk of complications.
-Scenario 3:Remote Monitoring and Follow-Up
-Anemiasense supports remote monitoring of patients with anemia through wearable devices or digital health platforms. Machine learning algorithms continuously analyze real-time data such as hemoglobin levels, activity levels, and medication adherence to provide insights to both patients and healthcare providers. This remote monitoring capability facilitates proactive management, enables timely adjustments to treatment regimens, and reduces the need for frequent in-person visits, particularly beneficial for patients in rural or underserved areas.
 
-
-The Anemiasense system was completed in the following steps:\
+The Anemiasense system was completed in the following steps:
 
  **Data Collection & Preparation**\
 Data collection is fundamental to machine learning, providing the raw material for training algorithms and making predictions. This process involves gathering relevant information from various sources such as databases, surveys, sensors, and web scraping. The quality, quantity, and diversity of collected data significantly impact the performance and accuracy of ML models.
@@ -91,6 +93,7 @@ Comparing the models
 We can see the accuracy of all models and based on accuracy and Test Accuracy Decision Tree, Random forest, and Gradient Boosting classifier model have highest accuracy.
  
 **Saving the best model**\ 
+
 After comparing its performance using different evaluation metrics means selecting the model with the highest performance and saving its weights and configuration. This is useful in avoiding the need to retrain the model every time it is needed and also to be able to use it in the future. Here, we have saved the **Gradient Boost Classifier model**.
 
 **Integrating with Web framework**\
@@ -106,7 +109,14 @@ For this project we created two HTML files namely
 and saved them in the templates folder.
 
 2. Building python code
+
 We created a python file named app.py and saved it in the root directory.
 
 3. Run the web application
+
 We run the web application using the command python app.py.
+
+![Home Page](static/home.png?raw=true "Home Page")
+![About Page](static/about.png?raw=true "About Page")
+![Contacts Page](static/contacts.png?raw=true "Contacts Page")
+![Prediction Page](static/prediction.png?raw=true "Prediction Page")

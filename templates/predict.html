@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anemia Prediction</title>
     <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .navbar a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #ff4d4d;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -64,8 +84,14 @@
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/">About</a>
+        <a href="prediction">Predict</a>
+        <a href="/">Contact</a>
+    </div>
     <div class="container">
-        <h4>Predict Anemia or Not!</h4>
+        <h4>Anemia Predictor</h4>
         <form action="/predict" method="post">
             <label for="Gender">Gender:</label>
             <select name="Gender" required>

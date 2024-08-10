@@ -9,11 +9,11 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
         }
         .background {
-            background-image: url('static\background_anemia.jpeg');
-
+            background-image: url('static/background_anemia.jpeg');
             background-size: 200% 100%;
             animation: bloodFlow 5s infinite linear;
             height: 100vh;
@@ -22,6 +22,8 @@
             align-items: center;
             text-align: center;
             flex-direction: column;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
         }
         @keyframes bloodFlow {
             from {
@@ -35,21 +37,35 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
             text-align: center;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .navbar a {
             color: white;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #ff4d4d;
         }
         .content {
+            color: black;
+            font-size: 26px;
+            margin-top: 70px;
+            max-width: 700px;
+            line-height: 1.5;
+        }
+        .content1 {
             color: white;
-            font-size: 24px;
-            margin-top: 60px;
+            font-size: 26px;
+            margin-top: 70px;
+            max-width: 700px;
+            line-height: 1.5;
         }
         .section {
             height: 100vh;
@@ -57,17 +73,93 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             box-sizing: border-box;
         }
         #home {
-            background: linear-gradient(90deg, #ff4d4d 25%, #e92222 50%, #870909 75%);
+            background: linear-gradient(90deg, #d31a1a 25%, #9b0f0f 50%, #650606 75%);
             background-size: 200% 100%;
             animation: bloodFlow 5s infinite linear;
         }
         #about {
-            background-color: #222;
+            background-color: #fff;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+        .box-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .box {
+            background-color: #fafafa;
+            padding: 25px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .box h2 {
+            color: #ff4d4d;
+            margin-bottom: 15px;
+        }
+        .box p {
+            color: #555;
+            line-height: 1.6;
+        }
+        #contact {
+            background-color: #f5f5f5;
+            color: black;
+            padding: 60px 20px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: #ff4d4d;
+        }
+        .contact-form button {
+            background-color: #ff4d4d;
             color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        .contact-form button:hover {
+            background-color: #e92222;
         }
     </style>
 </head>
@@ -76,23 +168,47 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="prediction">Predict</a>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
     </div>
     <div id="home" class="section background">
-        <div class="content">
-            <h2>Anemia Predictor : Your Health Guardian </h2>
-            <p>Empowering you with early detection for better management and healthier leaving</p>
+        <div class="content1">
+            <h2>Anemia Sense: Your Health Guardian</h2>
+            <p>Empowering you with early detection for better management and healthier living.</p>
         </div>
     </div>
     <div id="about" class="section">
         <div class="content">
             <h1>About</h1>
-            <p>Anemia is a condition that develops when your blood produces a lower-than-normal amount of healthy red blood cells. If you have anemia, your body does not get enough oxygen-rich blood. 
-                The lack of oxygen can make you feel tired or weak.Symptoms of anemia can include tiredness, weakness, shortness of breath, and pale or yellowish skin. Additionally, 
-                severe anemia may lead to symptoms like brittle nails and mouth ulcers. It's important to consult a healthcare provider for accurate diagnosis and treatment options.
-
-            </p>
-        </div> 
+            <p>Anemia is a condition that develops when your blood produces a lower-than-normal amount of healthy red blood cells...</p>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <h2>MCH</h2>
+                <p>Mean Corpuscular Hemoglobin (MCH) measures the average amount of hemoglobin in your red blood cells.</p>
+            </div>
+            <div class="box">
+                <h2>MCHC</h2>
+                <p>Mean Corpuscular Hemoglobin Concentration (MCHC) measures the concentration of hemoglobin in your red blood cells.</p>
+            </div>
+            <div class="box">
+                <h2>MCV</h2>
+                <p>Mean Corpuscular Volume (MCV) measures the average size of your red blood cells.</p>
+            </div>
+        </div>
     </div>
+    <div id="contact" class="section">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <div class="contact-form">
+                <form action="mailto:bandana.shaw612@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <p>Anemia Sense - Website by Bandana Shaw</p>
 </body>
 </html>

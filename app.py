@@ -38,7 +38,7 @@ def predict():
     elif prediction[0]==1:
         result = " you have Anemic Disease"
 
-    text = "Hence, based on calculation"
+    text = "Result: Hence, based on calculation"
     return render_template('predict.html', prediction_text = text+str(result))
 
 
