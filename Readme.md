@@ -120,3 +120,9 @@ We run the web application using the command python app.py.
 ![About Page](static/about.png?raw=true "About Page")
 ![Contacts Page](static/contacts.png?raw=true "Contacts Page")
 ![Prediction Page](static/prediction.png?raw=true "Prediction Page")
+
+
+The link of Badges earned during this course:-
+1. Inspect Rich Documents with Gemini Multimodality and Multimodal RAG Skill Badge - https://www.credly.com/badges/36eb6c27-31c1-4f75-9c0b-ae18ba37b453/public_url
+2. Prompt Design in Vertex AI Skill Badge - https://www.credly.com/badges/4caddb0b-c542-4b16-b235-59a755e3a079/public_url
+3. Develop GenAI Apps with Gemini and Streamlit Skill Badge - https://www.credly.com/badges/d96ebd8e-26e6-4c56-aa62-36e8eb3716a2/public_url 
