@@ -83,7 +83,7 @@ Multiple evaluation metrics means evaluating the model's performance on a test s
 Comparing the models
 | Index | Model                     | Score    |   
 |-------|---------------------------|----------|
-| 1     | Linear Regression         | 0.991935 |   
+| 1     | Logistic Regression       | 0.991935 |   
 | 2     | Decision Tree Classifier  | 1.000000 |   
 | 3     | Random Forest Classifier  | 1.000000 |   
 | 4     | Gaussian Naive Bayes      | 0.979839 |   
@@ -94,7 +94,7 @@ We can see the accuracy of all models and based on accuracy and Test Accuracy De
  
 **Saving the best model**\ 
 
-After comparing its performance using different evaluation metrics means selecting the model with the highest performance and saving its weights and configuration. This is useful in avoiding the need to retrain the model every time it is needed and also to be able to use it in the future. Here, we have saved the **Gradient Boost Classifier model**.
+After comparing its performance using different evaluation metrics means selecting the model with the highest performance and saving its weights and configuration. This is useful in avoiding the need to retrain the model every time it is needed and also to be able to use it in the future. Here, we have saved the **Gradient Boost Classifier model**. Later in my project I found that the model I choose was overfitting so I choose another model **Support Vector Classifier** whose accuracy score was 0.939516.
 
 **Integrating with Web framework**\
  A web application is built that is integrated to the model we built. A UI is provided for the users where she/he has to enter the values for predictions. The enter values are given to the saved model and prediction is showcased on the UI. 

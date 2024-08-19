@@ -6,7 +6,7 @@ from flask import Flask, request, render_template
 #loading the model
 model = pickle.load(open('model.pkl', 'rb'))
 
-app=Flask(__name__, static_url_path= '/Anemia Sense Leveraging Machine Learning For Precise Anemia Recognitions\static')
+app=Flask(__name__, static_url_path= '/Anemia Sense Leveraging Machine Learning For Precise Anemia Recognitions/static')
 
 @app.route("/")
 def home():
