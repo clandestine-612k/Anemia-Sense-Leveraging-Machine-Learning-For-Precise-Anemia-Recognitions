@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Anemia Prediction</title>
+</head>
+<body>
+    <h2>Upload an Image for Anemia Detection</h2>
+    <form action="/predict_photo" method="post" enctype="multipart/form-data">
+        <input type="file" name="photo" required>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
