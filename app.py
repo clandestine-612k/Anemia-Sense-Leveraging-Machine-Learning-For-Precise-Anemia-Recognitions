@@ -5,6 +5,8 @@ import tensorflow as tf
 from PIL import Image
 from flask import Flask, request, render_template
 import os
+from flask import Flask, send_from_directory
+
 
 # Load the tabular model
 model = pickle.load(open('model.pkl', 'rb'))
@@ -50,12 +52,12 @@ def predict():
     result = prediction[0]
 
     if result == 0:
-        message = " you don't have any Anemic Disease"
+        message = " You don't have any Anemic Disease"
     else:
-        message = " you have Anemic Disease"
+        message = " You have Anemic Disease"
 
     text = "Result: Hence, based on calculation"
-    return render_template('predict.html', prediction_text=text + str(message))
+    return render_template('result_ultimate.html', prediction_text=text + str(message))
 
 # Route: Upload form for image-based prediction
 @app.route("/photo_prediction")
@@ -70,6 +72,10 @@ def preprocess_image(image_path):
     img_array = np.array(img, dtype=np.float32) / 255.0
     img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
     return img_array
+
+@app.route('/download_diet_plan')
+def download_file():
+    return send_from_directory('static', 'Anemia_Weekly_Diet_Plan.pdf', as_attachment=True)
 
 # Route: Handle image prediction
 @app.route("/predict_photo", methods=["POST"])
@@ -91,7 +97,7 @@ def predict_photo():
     output_data = interpreter.get_tensor(output_details[0]["index"])
     prediction = output_data[0][0]  # Assuming the model returns a scalar
 
-    result = "You have Anemic Disease" if prediction < 0.5 else "You don't have Anemic Disease"
+    result = "You may have Anemic Disease. Please, go for Complete Blood Count (CBC) and test further for Anemia Detection." if prediction < 0.5 else "Congratulations!, You don't have Anemic Disease...Eat healty and stay healthy "
     return render_template("result.html", prediction_text=result)
 
 # Run the app
