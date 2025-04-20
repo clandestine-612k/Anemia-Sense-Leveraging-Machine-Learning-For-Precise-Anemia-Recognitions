@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Anemia Prediction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ff4d4d, #8b0000);
+            color: #fff;
+            height: 100vh;
+            padding-top: 200px; /* for navbar spacing */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffcccc;
+        }
+
+        .container {
+            background: linear-gradient(135deg, #ffffffee, #ffe6e6ee);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            color: #8b0000;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #333;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #8b0000;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #a30000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/#about">About</a>
+        <a href="/photo_prediction">Predict</a>
+        <a href="/#contact">Contact</a>
+    </div>
+
+    <!-- Upload Card -->
+    <div class="container">
+        <h2>Upload an Image for Anemia Detection</h2>
+        <form action="/predict_photo" method="post" enctype="multipart/form-data">
+            <input type="file" name="photo" required>
+            <br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
